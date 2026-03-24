@@ -57,14 +57,15 @@ for term in search_terms:
         offset += 100
         time.sleep(0.5)
 
-    print(f"'{term}': {total} found, {len([j for j in all_jobs if j['id'] in seen_ids])} total unique so far")
+    print(f"'{term}': {total} found, {len(all_jobs)} total unique so far")
 
 print(f"\nTotal unique jobs collected: {len(all_jobs)}")
 
-
 os.makedirs("../data", exist_ok=True)
 
-with open("../data/raw_jobs.json", "w", encoding="utf-8") as f:
-    json.dump(all_jobs, f, ensure_ascii=False, indent=2)
-
-print(f"Saved {len(all_jobs)} jobs to data/raw_jobs.json")
+try:
+    with open("/home/irene/Desktop/Job Market Skill Analyzer/data/raw_jobs.json", "w", encoding="utf-8") as f:
+        json.dump(all_jobs, f, ensure_ascii=False, indent=2)
+    print("✅ File saved successfully!")
+except Exception as e:
+    print(f"❌ Save failed: {e}")

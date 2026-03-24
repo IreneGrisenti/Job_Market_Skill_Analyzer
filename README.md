@@ -14,7 +14,7 @@ Search terms include both English and Swedish equivalents across roles such as d
 
 ## Limitations
 
-- **Snapshot in time** - the API only returns currently active listings. Results reflect the market at the time of collection (20/03/2026) and will differ if rerun.
+- **Snapshot in time** - the API only returns currently active listings. Results reflect the market at the time of collection (24/03/2026) and will differ if rerun.
 - **Mixed languages** - Swedish and English appear in the same dataset, which adds noise to the text analysis.
 - **Unstructured skills** - most listings do not use the API's structured skills fields, so skill extraction relies on free text analysis.
 
