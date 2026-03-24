@@ -64,8 +64,8 @@ print(f"\nTotal unique jobs collected: {len(all_jobs)}")
 os.makedirs("../data", exist_ok=True)
 
 try:
-    with open("/home/irene/Desktop/Job Market Skill Analyzer/data/raw_jobs.json", "w", encoding="utf-8") as f:
+    with open("data/raw_jobs.json", "w", encoding="utf-8") as f:
         json.dump(all_jobs, f, ensure_ascii=False, indent=2)
-    print("✅ File saved successfully!")
+    print("File saved successfully!")
 except Exception as e:
-    print(f"❌ Save failed: {e}")
+    print(f"Save failed: {e}")
